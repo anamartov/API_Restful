@@ -1,7 +1,5 @@
-package service;
+package com.openwebinars.hibernate;
 
-import modelo.Usuario;
-import repositorio.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +10,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public List getAllUsuarios() {
+    public List<Usuario> getAllUsuarios() {
         return userRepository.findAll();
     }
 
